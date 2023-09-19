@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SIA6" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SIA6>
+    <MAIN_OBJECT>
+     <NAME>ZSHOP_IAM_001_EXT</NAME>
+     <TYPE>SIA6</TYPE>
+     <DESCRIPTION>IAM App for Online Shop</DESCRIPTION>
+     <RESPONSIBLE>CB9980000012</RESPONSIBLE>
+     <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
+     <MASTER_SYSTEM>YLC</MASTER_SYSTEM>
+     <PACKAGE_REF>
+      <PACKAGE_NAME>Z_PURCHASE_REQ_002</PACKAGE_NAME>
+     </PACKAGE_REF>
+     <ABAP_LANGU_VERSION>5</ABAP_LANGU_VERSION>
+    </MAIN_OBJECT>
+    <APP_ID>ZSHOP_IAM_001_EXT</APP_ID>
+    <APP_TYPE>EXT</APP_TYPE>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+    <UI_APP_ID>ZONLINESHOP3_UI5R</UI_APP_ID>
+    <SERVICE>
+     <item>
+      <REL_NAME>ZUI_AONLINESHOP_002_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZSHOP_IAM_001_EXT</APP_ID>
+      <SRVC_NAME>54C3E251E20431774B0916C4564969</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <UIAD_SRC>ZONLINESHOP3_UI5R</UIAD_SRC>
+      <TEXT>##GENERATED ZAONLINESHOP_002</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+    </SERVICE>
+    <PUBLISH_STATUS>p</PUBLISH_STATUS>
+   </SIA6>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition for ZC_AONLINESHOP002'
+define service ZUI_AONLINESHOP_002_O4 {
+  expose ZC_AONLINESHOP_002 as OnlineShop;
+}

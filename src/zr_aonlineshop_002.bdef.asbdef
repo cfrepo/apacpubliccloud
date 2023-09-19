@@ -1,0 +1,67 @@
+managed implementation in class ZBP_R_AONLINESHOP_002 unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZR_AONLINESHOP_002 alias OnlineShop
+persistent table zaonlineshop_002
+draft table zaonlineshop_00d
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master ( global )
+//with unmanaged save
+
+{
+  field ( readonly )
+  OrderUUID,
+  CreatedAt,
+  CreatedBy,
+  LastChangedAt,
+  LastChangedBy,
+  LocalLastChangedAt,
+  PurchaseRequisition,
+  PrCreationDate,
+  DeliveryDate;
+
+  field ( numbering : managed )
+  OrderUUID;
+
+  create;
+  update ( features : instance );
+  delete;
+
+  static action upload_file;
+
+  draft action ( features : instance ) Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare { validation checkOrderedQuantity; validation checkDeliveryDate; }
+
+  determination setInitialOrderValues on modify { create; }
+  determination calculateTotalPrice on modify { create; field Price; }
+  validation checkOrderedQuantity on save { create; field OrderQuantity; }
+  validation checkDeliveryDate on save { create; field DeliveryDate; }
+
+  action ( features : instance ) createPurchaseRequisitionItem result [1] $self;
+
+  mapping for zaonlineshop_002
+    {
+      OrderUUID           = order_uuid;
+      OrderID             = order_id;
+      OrderedItem         = ordered_item;
+      Price               = price;
+      TotalPrice          = total_price;
+      Currency            = currency;
+      OrderQuantity       = order_quantity;
+      DeliveryDate        = delivery_date;
+      OverallStatus       = overall_status;
+      Notes               = notes;
+      CreatedBy           = created_by;
+      CreatedAt           = created_at;
+      LastChangedBy       = last_changed_by;
+      LastChangedAt       = last_changed_at;
+      LocalLastChangedAt  = local_last_changed_at;
+      PurchaseRequisition = purchase_requisition;
+      PrCreationDate      = pr_creation_date;
+    }
+}
