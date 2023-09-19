@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_ENHO" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TOOL>BADI_IMPL</TOOL>
+   <SHORTTEXT>Modify at item level</SHORTTEXT>
+   <SPOT_NAME>MM_PUR_S4_PR</SPOT_NAME>
+   <IMPL>
+    <ENH_BADI_IMPL_DATA>
+     <SPOT_NAME>MM_PUR_S4_PR</SPOT_NAME>
+     <BADI_NAME>MM_PUR_S4_PR_MODIFY_ITEM</BADI_NAME>
+     <IMPL_NAME>ZXX_BADI_MODIFY_ITEM</IMPL_NAME>
+     <IMPL_CLASS>ZCL_PR_MODIFY_ITEM</IMPL_CLASS>
+     <ACTIVE>X</ACTIVE>
+     <IMPL_SHORTTEXT>PR modify item</IMPL_SHORTTEXT>
+     <LOCKED_IN_CUSTOMIZING>X</LOCKED_IN_CUSTOMIZING>
+    </ENH_BADI_IMPL_DATA>
+   </IMPL>
+  </asx:values>
+ </asx:abap>
+</abapGit>
